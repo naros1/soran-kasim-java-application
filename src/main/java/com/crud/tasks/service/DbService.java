@@ -11,14 +11,16 @@ import java.util.Optional;
 @Service
 public class DbService {
     @Autowired
-    private TaskRepository repository;
+    private TaskRepository allTaskRepository;
+    @Autowired
+    private TaskRepository taskRepository;
 
     public List<Task> getAllTasks(){
-        return repository.findAll();
+        return allTaskRepository.findAll();
     }
 
     public Task getTaskById(Long id){
-        return repository.findById(id).get();
+        return taskRepository.findById(id).get();
     }
 
 }

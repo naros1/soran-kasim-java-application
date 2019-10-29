@@ -14,13 +14,25 @@ public class DbService {
     private TaskRepository allTaskRepository;
     @Autowired
     private TaskRepository taskRepository;
+    @Autowired
+    private TaskRepository saveTaskRepository;
+    @Autowired
+    private TaskRepository deleteTaskRepositiory;
 
     public List<Task> getAllTasks(){
         return allTaskRepository.findAll();
     }
 
-    public Task getTaskById(Long id){
-        return taskRepository.findById(id).get();
+    public Optional<Task> getTaskById(final Long id){
+        return taskRepository.findById(id);
+    }
+
+    public Task saveTask(final Task task){
+        return saveTaskRepository.save(task);
+    }
+
+    public void deleteTaskById(final Long id){
+        deleteTaskRepositiory.deleteById(id);
     }
 
 }

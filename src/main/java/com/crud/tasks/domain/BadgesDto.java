@@ -18,6 +18,6 @@ public class BadgesDto {
     @JsonProperty("votes")
     private int votes;
 
-    @JsonProperty("attachmentByType")
+    @JsonProperty("attachmentsByType")
     private AttachmentsByTypeDto attachmentsByTypeDto;
 }

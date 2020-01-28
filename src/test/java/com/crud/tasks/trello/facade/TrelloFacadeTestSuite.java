@@ -22,7 +22,7 @@ public class TrelloFacadeTestSuite {
     private TrelloMapper trelloMapper;
 
     @Test
-    public void TrelloMapperTest() {
+    public void trelloMapperTest() {
         //Given
         TrelloList trelloList1 = new TrelloList("1", "test", false);
         TrelloList trelloList2 = new TrelloList("2", "test2", false);
